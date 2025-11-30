@@ -441,99 +441,9 @@ The system provides comprehensive evaluation through:
 
 ---
 
-## 10. User Interface Design
+## 10. Future Enhancements
 
-### 10.1 Layout Structure
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Menu Bar                             │
-├──────────┬──────────────────────────┬───────────────────┤
-│          │                          │                   │
-│  Left    │      Center              │    Right          │
-│  Panel   │      Panel               │    Panel          │
-│          │                          │                   │
-│  • Search│  • Results (Tabs)        │  • Preprocessing  │
-│  • Dataset│  • VSM Results          │  • Visualizations │
-│  Info    │  • BM25 Results          │  • Evaluation     │
-│          │  • Boolean Results       │                   │
-│          │                          │                   │
-└──────────┴──────────────────────────┴───────────────────┘
-│                    Status Bar                           │
-└─────────────────────────────────────────────────────────┘
-```
-
-### 10.2 Key UI Components
-
-1. **Search Panel**:
-   - Query input field
-   - Model selection (VSM, BM25, Boolean, All)
-   - Result limit option
-   - Search button
-
-2. **Results Panel**:
-   - Tabbed interface for each model
-   - Document list with scores
-   - Document preview
-   - Scrollable results
-
-3. **Visualization Panel**:
-   - Word Cloud tab
-   - Frequency tab
-   - Similarity Scores tab
-   - Model Comparison tab
-   - LDA Topics tab
-
-4. **Evaluation Panel**:
-   - Metrics table
-   - Precision-Recall curves
-   - Model comparison charts
-
-5. **Preprocessing Panel**:
-   - Document-by-document preprocessing steps
-   - Original text snippets
-   - Transformation at each step
-   - Vectorization results (BoW, TF-IDF)
-   - LDA topic assignments
-
----
-
-## 11. Technical Challenges and Solutions
-
-### 11.1 Challenge: Real-time Wikipedia API Loading
-**Problem**: API rate limiting and network issues
-**Solution**: 
-- Implemented progress callbacks
-- Added fallback to HuggingFace datasets
-- Rate limiting with delays between requests
-- Error handling and retry logic
-
-### 11.2 Challenge: GUI Responsiveness
-**Problem**: Long-running operations freeze UI
-**Solution**:
-- Implemented threading for background tasks
-- Progress windows with status updates
-- Thread-safe UI updates using `root.after()`
-
-### 11.3 Challenge: Large Document Processing
-**Problem**: Memory and performance issues with large datasets
-**Solution**:
-- Sparse matrix representations
-- Configurable document limits
-- Efficient vectorization
-- Lazy loading where possible
-
-### 11.4 Challenge: Model Comparison Visualization
-**Problem**: Different result lengths and score ranges
-**Solution**:
-- Normalized score handling
-- Flexible plotting with padding
-- Multiple visualization types
-
----
-
-## 12. Future Enhancements
-
-### 12.1 Potential Improvements
+### 10.1 Potential Improvements
 1. **Query Expansion**: Add synonym and related term expansion
 2. **Relevance Feedback**: Implement user feedback for result improvement
 3. **Advanced Preprocessing**: Named entity recognition, phrase detection
@@ -545,7 +455,7 @@ The system provides comprehensive evaluation through:
 9. **Advanced Visualizations**: Interactive plots, 3D visualizations
 10. **Performance Optimization**: Further speed improvements
 
-### 12.2 Scalability Considerations
+### 10.2 Scalability Considerations
 - Current system handles 20-100 documents efficiently
 - Can be extended to 1000+ documents with optimizations
 - Vectorization uses sparse matrices for memory efficiency
@@ -553,7 +463,7 @@ The system provides comprehensive evaluation through:
 
 ---
 
-## 13. Group Members
+## 11. Group Members
 
 - **1. Mickel Wassef** (22010449)
 - **2. Amr Khaled** (2206159)
@@ -562,7 +472,7 @@ The system provides comprehensive evaluation through:
 
 ---
 
-## 14. Conclusion
+## 12. Conclusion
 
 This Information Retrieval and Text Analytics system successfully implements a comprehensive solution for document retrieval with multiple models, evaluation metrics, and visualization capabilities. The system demonstrates:
 
@@ -577,7 +487,7 @@ The project successfully combines theoretical IR concepts with practical impleme
 
 ---
 
-## 15. References
+## 13. References
 
 ### Academic References
 - Salton, G., & McGill, M. J. (1986). *Introduction to Modern Information Retrieval*. McGraw-Hill.
@@ -602,9 +512,9 @@ The project successfully combines theoretical IR concepts with practical impleme
 
 ---
 
-## 16. Appendix
+## 14. Appendix
 
-### 16.1 Installation Instructions
+### 14.1 Installation Instructions
 
 1. **Prerequisites**:
    ```bash
@@ -631,7 +541,7 @@ The project successfully combines theoretical IR concepts with practical impleme
    python gui_main.py
    ```
 
-### 16.2 Project Structure
+### 14.2 Project Structure
 ```
 ir project/
 ├── data_loader.py          # Data loading and management
@@ -648,11 +558,10 @@ ir project/
 ├── requirements.txt        # Dependencies
 ├── README.md               # Project documentation
 ├── PROJECT_REPORT.md       # This report
-└── notebooks/
-    └── visualization.ipynb # Interactive notebook
+
 ```
 
-### 16.3 Usage Examples
+### 14.3 Usage Examples
 
 #### Example 1: Basic Search
 1. Launch GUI: `python gui_main.py`
@@ -685,7 +594,7 @@ ir project/
 ---
 
 **Report Version**: 1.0  
-**Last Updated**: 2024  
+**Last Updated**: 2025  
 **Project Status**: Complete
 
 ---

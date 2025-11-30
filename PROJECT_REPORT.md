@@ -64,23 +64,23 @@ The system handles:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    GUI Application Layer                      │
-│  (gui_main.py, gui_components.py, gui_utils.py)            │
+│                    GUI Application Layer                    │
+│  (gui_main.py, gui_components.py, gui_utils.py)             │
 └──────────────────────┬──────────────────────────────────────┘
                         │
 ┌───────────────────────┴──────────────────────────────────────┐
 │                  Core System Components                      │
 ├──────────────────────────────────────────────────────────────┤
-│  • Data Loader (data_loader.py)                             │
-│  • Text Preprocessor (preprocessing.py)                     │
-│  • Vectorizer (vectorization.py)                            │
-│  • Retrieval Models (retrieval_models.py)                   │
-│  • Evaluator (evaluation.py)                                │
-│  • Visualizer (visualization.py)                            │
+│  • Data Loader (data_loader.py)                              │
+│  • Text Preprocessor (preprocessing.py)                      │
+│  • Vectorizer (vectorization.py)                             │
+│  • Retrieval Models (retrieval_models.py)                    │
+│  • Evaluator (evaluation.py)                                 │
+│  • Visualizer (visualization.py)                             │
 └──────────────────────────────────────────────────────────────┘
                         │
 ┌───────────────────────┴──────────────────────────────────────┐
-│                    Data Layer                                 │
+│                    Data Layer                                │
 │  • Wikipedia API / HuggingFace Datasets                      │
 │  • Document Storage (in-memory)                              │
 └──────────────────────────────────────────────────────────────┘
@@ -234,15 +234,37 @@ The GUI is built using Tkinter with a modular design:
 - ✅ Real-time search execution
 - ✅ Results displayed with scores and titles
 - ✅ Document preview functionality
+  
+  <img width="588" height="434" alt="image" src="https://github.com/user-attachments/assets/09988a6d-6e35-430c-96d4-e27b884e77a2" />
+
 
 ### 5.2 Visualization Features
 - ✅ **Word Cloud**: Visual representation of top keywords
+  
+  <img width="586" height="700" alt="image" src="https://github.com/user-attachments/assets/d0fd454a-45fb-4f12-8f07-13a496e88293" />
+
 - ✅ **Frequency Charts**: Bar charts for word frequencies
+  
+  <img width="562" height="757" alt="image" src="https://github.com/user-attachments/assets/412fbb28-7328-4980-b9ca-309c0a8f95c2" />
+
 - ✅ **Similarity Scores**: Visual comparison of document-query similarities
+  
+  <img width="567" height="773" alt="image" src="https://github.com/user-attachments/assets/52e97ce6-a694-4744-9782-85e3c0f866fc" />
+
 - ✅ **Model Comparison**: Side-by-side comparison of all three models
+  
+  <img width="560" height="756" alt="image" src="https://github.com/user-attachments/assets/00e41b21-1499-4e53-9d34-1344f7d18286" />
+
 - ✅ **LDA Topics**: 
   - Topic words visualization (bar charts)
+    
+  <img width="762" height="566" alt="image" src="https://github.com/user-attachments/assets/f167a34f-d639-4c90-a13c-a979fab3b916" />
+    
   - Topic distribution across documents (stacked bar chart)
+    
+  <img width="752" height="593" alt="image" src="https://github.com/user-attachments/assets/f6303c83-6d0e-40c4-bac6-124572ac089c" />
+
+      
 
 ### 5.3 Evaluation Features
 - ✅ Precision@k calculation
@@ -250,6 +272,8 @@ The GUI is built using Tkinter with a modular design:
 - ✅ Mean Average Precision (MAP)
 - ✅ Precision-Recall curves for all models
 - ✅ Comparison tables
+  
+<img width="789" height="881" alt="image" src="https://github.com/user-attachments/assets/3f6a5a1b-dd8d-4e83-a7ef-f500368f040d" />
 
 ### 5.4 Preprocessing Analysis
 - ✅ Step-by-step preprocessing visualization
@@ -261,6 +285,8 @@ The GUI is built using Tkinter with a modular design:
 - ✅ BoW representation (top terms)
 - ✅ TF-IDF representation (top weighted terms)
 - ✅ LDA topic assignment per document
+  
+<img width="767" height="777" alt="image" src="https://github.com/user-attachments/assets/8b2c2e93-114d-4968-a2b0-57ba05844cb3" />
 
 ### 5.5 User Interface Features
 - ✅ Modern tabbed interface
@@ -420,19 +446,19 @@ The system provides comprehensive evaluation through:
 ### 10.1 Layout Structure
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    Menu Bar                              │
+│                    Menu Bar                             │
 ├──────────┬──────────────────────────┬───────────────────┤
 │          │                          │                   │
 │  Left    │      Center              │    Right          │
-│  Panel   │      Panel               │    Panel         │
+│  Panel   │      Panel               │    Panel          │
 │          │                          │                   │
 │  • Search│  • Results (Tabs)        │  • Preprocessing  │
-│  • Dataset│  • VSM Results          │  • Visualizations│
+│  • Dataset│  • VSM Results          │  • Visualizations │
 │  Info    │  • BM25 Results          │  • Evaluation     │
 │          │  • Boolean Results       │                   │
 │          │                          │                   │
 └──────────┴──────────────────────────┴───────────────────┘
-│                    Status Bar                            │
+│                    Status Bar                           │
 └─────────────────────────────────────────────────────────┘
 ```
 
